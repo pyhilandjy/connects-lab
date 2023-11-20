@@ -86,6 +86,12 @@ x-airflow-common:
       condition: service_healthy
 
 services:
+  selenium:
+      container_name: remote_chromedriver
+      image: selenium/standalone-chrome:latest
+      ports:
+        - 4444:4444
+      restart: always 
   mongodb:
     image: mongo
     ports:
