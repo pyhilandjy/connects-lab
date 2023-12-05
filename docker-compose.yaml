@@ -1,3 +1,4 @@
+
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -86,17 +87,34 @@ x-airflow-common:
       condition: service_healthy
 
 services:
-  selenium:
-      container_name: remote_chromedriver
-      image: selenium/standalone-chrome:latest
-      ports:
-        - 4444:4444
-      restart: always 
-  mongodb:
-    image: mongo
+  selenium1:
+    container_name: remote_firefox-1
+    image: selenium/standalone-firefox:120.0
     ports:
-      - "27017:27017"
+      - "4444:4444"
+      - "7900:7900"
+    shm_size: "2g"
+    restart: always 
+
+  selenium2:
+    container_name: remote_firefox-2
+    image: selenium/standalone-firefox:120.0
+    ports:
+      - "4445:4444"  
+      - "7901:7900"  
+    shm_size: "2g"
     restart: always
+
+  selenium3:
+    container_name: remote_firefox-3
+    image: selenium/standalone-firefox:120.0
+    ports:
+      - "4446:4444"  
+      - "7902:7900"  
+    shm_size: "2g"
+    restart: always
+
+
   postgres:
     image: postgres:13
     environment:
