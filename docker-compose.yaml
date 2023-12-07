@@ -76,7 +76,7 @@ x-airflow-common:
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
-    - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
+    - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
@@ -96,25 +96,22 @@ services:
     shm_size: "2g"
     restart: always 
 
-  selenium2:
-    container_name: remote_firefox-2
-    image: selenium/standalone-firefox:120.0
-    ports:
-      - "4445:4444"  
-      - "7901:7900"  
-    shm_size: "2g"
-    restart: always
-
-  selenium3:
-    container_name: remote_firefox-3
-    image: selenium/standalone-firefox:120.0
-    ports:
-      - "4446:4444"  
-      - "7902:7900"  
-    shm_size: "2g"
-    restart: always
-
-
+  # selenium2:
+  #   container_name: remote_firefox-2
+  #   image: selenium/standalone-firefox:120.0
+  #   ports:
+  #     - "4445:4444"  
+  #     - "7901:7900"  
+  #   shm_size: "2g"
+  #   restart: always 
+  # selenium3:
+  #   container_name: remote_firefox-3
+  #   image: selenium/standalone-firefox:120.0
+  #   ports:
+  #     - "4446:4444"  
+  #     - "7902:7900"  
+  #   shm_size: "2g"
+  #   restart: always 
   postgres:
     image: postgres:13
     environment:
