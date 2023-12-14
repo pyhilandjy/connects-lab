@@ -76,7 +76,7 @@ def update_json_file(**kwargs):
     morphs_results = [ti.xcom_pull(task_ids=f"morphs_{i}") for i in range(1, num_parts)]
 
     # 파일 경로
-    file_path = 'insta_crawling_morphs.json'
+    file_path = '/opt/airflow/dags/services/insta_crawling_morphs.json'
 
     # 파일이 존재하지 않을 경우 빈 리스트로 초기화
     if not os.path.exists(file_path):
