@@ -91,7 +91,7 @@ def initialize_webdriver():
     firefox_options = webdriver.FirefoxOptions()
     # 웹 드라이버 초기화
     driver = webdriver.Remote(
-        command_executor='http://remote_firefox:4444',  # Selenium Standalone Server 주소
+        command_executor='http://remote_firefox-1:4444',  # Selenium Standalone Server 주소
         options=firefox_options,
     )
     return driver

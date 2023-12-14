@@ -32,7 +32,7 @@ def morphs_to_mongo(data: list[dict]):
     db = client["ConnectsLab"]
 
     # 연결할 컬랙션 이름
-    collection = db["insta_crawling_morphs_test"]
+    collection = db["ts"]
 
     # 적재
     collection.insert_many(data)
