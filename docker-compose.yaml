@@ -87,8 +87,8 @@ x-airflow-common:
       condition: service_healthy
 
 services:
-  selenium1:
-    container_name: remote_firefox-1
+  selenium:
+    container_name: remote_firefox
     image: selenium/standalone-firefox:120.0
     ports:
       - "4444:4444"
