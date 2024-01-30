@@ -7,7 +7,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from services.selenium_tools import (get_content, insta_id, move_next,
                             select_First, initialize_webdriver)
-from services.database import (crawl_to_mongo, crawl_to_mongo_daily, search_id)
+from services.database import (crawl_to_mongo, crawl_to_mongo_daily, search_id, delete_id)
 
 
 options = webdriver.FirefoxOptions()
