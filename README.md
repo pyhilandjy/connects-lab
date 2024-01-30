@@ -74,17 +74,22 @@ Instagram에서 유사한 데이터 크롤링
   * 선별된 계정에서 하루 전날 업데이트 된 데이터만 크롤링하는 코드로 수정(instagram_job)
 
 * **데이터 적재**
-  * daily_data 컬렉션을 추가하여 daily로 들어오는 data를 적재
+  * daily_data 컬렉션을 추가하여 daily로 들어오는 data를 적재(database.py)
  
 * **데이터 처리**
-  * daily_data를 Tokenizing후 insta_crawling_morphs 컬렉션에 저장
+  * daily_data를 Tokenizing후 insta_crawling_morphs 컬렉션에 저장(morphs_job.py, database.py)
+
+* **자동화**
+  * airflow를 사용하여 매일 9시 데이터 수집, 적재, 처리 후 Dashboard 업데이트
 
 ### **3rd Step.**
 
 개인적으로 airflow의 기능을 사용해고자 병렬처리, xcom 사용
 
-* **airflow**
+> <p align="center"><img src="assets/airflow.png" width="840"></p>
+
+* **airflow** (미완성)
   * airflow의 다양한 기능을 사용해보고싶어 Task 간에 데이터를 전달하는 Xcom 사용
-  * 크롤링 시간을 단축하기 위해 크롤링 코드 병렬처리를 하였지만 계정차단 이슈로 실패
+  * 크롤링 시간을 단축하기 위해 크롤링 코드 병렬처리를 하였지만 계정 차단 이슈로 실패
   * tokenizing 코드를 병렬처리 
 
