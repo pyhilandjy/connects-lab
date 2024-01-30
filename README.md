@@ -4,53 +4,52 @@
 
 ## **프로젝트 개요**
 
-- **프로젝트 목표**: 육아 
+- **프로젝트 목표**: Instagram에서 #육아일기 데이터를 크롤링 및 Dashboard 작성
 
 - **기간**: 23.11.15 ~ 23.12.20
 
-- **결과**:
 > <p align="center"><img src="assets/result.jpg" width="840"></p>
->
-> - 참고: 김용담강사는 발표회 당일 부재로 발표채점 생략
+
 
 <br>
 
 ### 프로젝트 기술스택
 
 ![Python](https://img.shields.io/badge/Python-ffe74a.svg?style=flat&logo=Python&logoColor=blue) 
-![airflow](https://img.shields.io/badge/Airflow-ffe74a.svg?style=flat&logo=Python&logoColor=blue) 
-![NumPy](https://img.shields.io/badge/NumPy-4d77cf.svg?style=flat&logo=NumPy&logoColor=4dabcf)
-![Pandas](https://img.shields.io/badge/Pandas-130654.svg?style=flat&logo=Pandas&logoColor=whitle) 
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C.svg?style=flat&logo=Matplotlib&logoColor=white) 
-![Altair](https://img.shields.io/badge/Vega%20Altair-fbc234.svg?style=flat&logo=Vega%20Altair&logoColor=black) 
-![Plotly](https://img.shields.io/badge/Plotly-262626.svg?style=flat&logo=Plotly&logoColor=white) 
+![Docker](https://img.shields.io/badge/Docker-4d77cf.svg?style=flat&logo=NumPy&logoColor=4dabcf)
+![Airflow](https://img.shields.io/badge/Airflow-130654.svg?style=flat&logo=Pandas&logoColor=whitle) 
+![Dash](https://img.shields.io/badge/Dash-11557C.svg?style=flat&logo=Matplotlib&logoColor=white) 
+![AWS](https://img.shields.io/badge/AWS-262626.svg?style=flat&logo=Plotly&logoColor=white) 
 
 <br>
 
-## 1. 탐색적 데이터분석(EDA) 수행계획
+## 1. 현 프로젝트에 맞는 Pipeline 구성하기
 
 ### **Overview**
 
-데이원컴퍼니(패스트캠퍼스)의 과거 1년치의 데이터를 분석하여 비즈니스 매출 상승 혹은 손실 감소, 고객 서비스에 기여할 만한 인사이트 도출하기. 
+- 생애초기(0-4세)는 뇌 신경망의 발달이 폭발적으로 일어나는 시기이다.
 
-- 데이터셋을 살펴본 결과, 분석 가능한 **주요 요인'Factor' 4가지**를 **가정**해 보았습니다. <br> 
+- 이 시기에 다양한 외부 자극을 접하고 소화하며 아이들의 두뇌가 성장한다.
 
-- 그 4가지 요인'Factor'를 가지고 교육기업의 **비즈니스 모델을 추론**하고자 했습니다.
+- 가장 중요한 외부 자극 중 하나가 ‘부모의 말’ 이다.
 
-- 추론한 비즈니스 모델을 가지고 **특징 및 강점과 약점을 파악**하여, **매출**에 어떻게 **영향**을 미치는지 살펴보았습니다.
+- 한 가정에서 아이가 성장하는 동안의 대화내용을 담은 음성파일이 회사측에 존재 하지 않는다.
 
-- 결과적으로 분석결과에서 마케팅, 컨텐츠제작, 운영 등 **여러가지 관점으로 인사이트를 도출**해 보았습니다.
+- 필요로하는 데이터와 유사한 데이터는 Instagram의 **#육아일기** 라고 판단하였다.
+
+- Instagram의 데이터로 추후 고객들에게 보여질 Dashboard를 구상하고 확인하기 위한 프로젝트.
 
 <br>
 
 ### **1st Step.**
 
-현재 데이터 셋으로 어떤 **요인 ‘factor’** 을 분석할 수 있을까?
+Instagram에서 유사한 데이터 크롤링
 
-* **Factor**: **고객**
-  * 실거래금액으로 매출, 결제 건, 쿠폰분석을 통해, 주 고객군을 분석한다.
-  * B2C, B2B, 학생, 직장인, 기업, 신규 또는 기존 고객 인지 어느 고객이 주 고객이 되는가?
-  * 주 고객군이 확인되면 마케팅에서 Audience 설정 전략을 수립 할 수 있지 않을까?
+* **#육아일기**
+  * Web으로 인스타그램에서 #육아일기 를 검색했을때 15개의 게시물로 제한되어있다.
+  * META에서 Instagram graph API를 사용하여 보았지만 데이터 수집을 위한 API가 아니라 광고를 목적으로 한 API라 판단.
+  * 대안책으로 꾸준히 업데이트를 하는 유저의 계정을 수작업으로 선별 후 선별된 계정의 게시물 크롤링
+     *(instagram_job.py)
 
 * **Factor**: **상품**, **카테고리**
   * 매출 및 결제건을 통한 주력 카테고리 및 상품을 확인한다.
