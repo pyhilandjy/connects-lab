@@ -23,8 +23,6 @@
 
 <br>
 
-## 1. 현 프로젝트에 맞는 Pipeline 구성하기
-
 ### **Overview**
 
 - 생애초기(0-4세)는 뇌 신경망의 발달이 폭발적으로 일어나는 시기이다.
@@ -63,10 +61,10 @@ Instagram에서 유사한 데이터 크롤링
 
 ### **2nd Step.**
 
-추후 서비스에 Daily로 들어올 데이터를 위한 airflow scheduler
-
+추후 서비스에 Daily로 들어올 데이터를 위한 Pipeline 구성
+>
 > <p align="center"><img src="assets/pipeline.png" width="840"></p>
-
+>
 <br>
 
 * **Docker**
