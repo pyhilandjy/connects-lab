@@ -65,7 +65,7 @@ Instagram에서 유사한 데이터 크롤링
 
 추후 서비스에 Daily로 들어올 데이터를 위한 airflow scheduler
 
-> <p align="center"><img src="assets/pipline.jpg" width="840"></p>
+> <p align="center"><img src="assets/pipeline.png" width="840"></p>
 
 <br>
 
