@@ -17,9 +17,9 @@
 
 ![Python](https://img.shields.io/badge/Python-ffe74a.svg?style=flat&logo=Python&logoColor=blue) 
 ![Docker](https://img.shields.io/badge/Docker-4d77cf.svg?style=flat&logo=Docker&logoColor=4dabcf)
-![Airflow](https://img.shields.io/badge/Airflow-130654.svg?style=flat&logo=Pandas&logoColor=whitle) 
-![Dash](https://img.shields.io/badge/Dash-11557C.svg?style=flat&logo=Matplotlib&logoColor=white) 
-![AWS](https://img.shields.io/badge/AWS-262626.svg?style=flat&logo=Plotly&logoColor=white) 
+![Airflow](https://img.shields.io/badge/Airflow-130654.svg?style=flat&logo=Airflow&logoColor=whitle) 
+![Dash](https://img.shields.io/badge/Dash-11557C.svg?style=flat&logo=Dash&logoColor=white) 
+![AWS](https://img.shields.io/badge/AWS-262626.svg?style=flat&logo=AWS&logoColor=white) 
 
 <br>
 
