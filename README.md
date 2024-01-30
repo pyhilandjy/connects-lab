@@ -67,6 +67,8 @@ Instagram에서 유사한 데이터 크롤링
 
 > <p align="center"><img src="assets/pipline.jpg" width="840"></p>
 
+<br>
+
 * **Docker**
   * 개발 환경, 테스트 환경, 그리고 프로덕션 환경 간에 일관성 있게 애플리케이션을 배포하기 위하여 사용
 
