@@ -18,9 +18,8 @@
 ### 프로젝트 기술스택
 
 ![Python](https://img.shields.io/badge/Python-ffe74a.svg?style=flat&logo=Python&logoColor=blue) 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![airflow](https://img.shields.io/badge/Airflow-ffe74a.svg?style=flat&logo=Python&logoColor=blue) 
 ![NumPy](https://img.shields.io/badge/NumPy-4d77cf.svg?style=flat&logo=NumPy&logoColor=4dabcf)
-
 ![Pandas](https://img.shields.io/badge/Pandas-130654.svg?style=flat&logo=Pandas&logoColor=whitle) 
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C.svg?style=flat&logo=Matplotlib&logoColor=white) 
 ![Altair](https://img.shields.io/badge/Vega%20Altair-fbc234.svg?style=flat&logo=Vega%20Altair&logoColor=black) 
