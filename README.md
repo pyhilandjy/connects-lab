@@ -11,7 +11,7 @@
 
 
 
-<br>
+<hr>
 
 ### 프로젝트 기술스택
 
@@ -21,7 +21,7 @@
 ![Dash](https://img.shields.io/badge/Dash-11557C.svg?style=flat&logo=Dash&logoColor=white) 
 ![AWS](https://img.shields.io/badge/AWS-262626.svg?style=flat&logo=AWS&logoColor=white) 
 
-<br>
+<hr>
 
 ### **Overview**
 
@@ -37,7 +37,7 @@
 
 - Instagram의 데이터로 추후 고객들에게 보여질 Dashboard를 구상하고 확인하기 위한 프로젝트.
 
-<br>
+<hr>
 
 ### **1st Step.**
 
@@ -65,7 +65,7 @@ Instagram에서 유사한 데이터 크롤링
 >
 > <p align="center"><img src="assets/pipeline.png" width="840"></p>
 >
-<br>
+<hr>
 
 * **Docker**
   * 개발 환경, 테스트 환경, 그리고 프로덕션 환경 간에 일관성 있게 애플리케이션을 배포하기 위하여 사용
